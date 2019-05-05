@@ -1,0 +1,615 @@
+/* Main CSS Desenvolvido até 500px */
+/*--------------------------------------------------------------------------------------
+Agência Thot
+0. GLOBAL
+01. MENU
+02. BANNER
+03. SERVICOS
+04. LAYOUTS
+05. PLANOS
+06. TESTEMUNHOS
+07. CONTATO
+08. SUBMENU
+09. RODAPÉ
+10. PAGINA PLANOS
+11. PAGINAS PLANO BASICO / PLANO PROFISSIONAL / PLANO AVANCADO
+12. PAGINA PLANO BASICO
+13. PAGINA PLANO PROFISSIONAL
+14. PAGINA PLANO AVANCADO
+ ----------------------------------------------------------------------------------------*/
+/*--------------------
+    0. GLOBAL
+ ----------------------*/
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+
+@font-face {
+  font-family: Riffic;
+  font-weight: bold;
+  src        : url("../fonts/riffic.otf") format("opentype");
+}
+
+/*--------------------
+     1. MENU
+  ----------------------*/
+
+#logo {
+  text-align   : center;
+  margin-bottom: -120px;
+}
+
+#logo img {
+  height: 120px;
+}
+
+#menuBar {
+  background-color: #A9383D;
+  border-top      : 5px solid #B196AA;
+  border-bottom   : 5px solid #B196AA;
+  padding         : 7px 12px;
+  display         : flex;
+  justify-content : flex-end;
+}
+
+#menuWhatsapp {
+  display                   : flex;
+  align-items               : center;
+  transform                 : translateX(-350px);
+  transition                : transform 10s;
+  transition-timing-function: linear;
+}
+
+#menuWhatsapp img {
+  height: 25px;
+  margin: 0 5px;
+}
+
+#menuWhatsapp a {
+  font-family: Montserrat;
+  font-weight: normal;
+  font-size  : 10pt;
+  color      : white;
+}
+
+#menuFacebook {
+  display: none;
+}
+
+.navbar {
+  padding: 20px;
+}
+
+.navbar-toggler {
+  margin-left: auto;
+}
+
+.navbar-nav li {
+  text-align: right;
+}
+
+.nav-item a {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size  : 14pt;
+}
+
+.nav-item:first-of-type a {
+  margin: 20px 0 0;
+}
+
+/*--------------------
+     2. BANNER
+  ----------------------*/
+#bannerText {
+  background-color: #672224;
+  padding         : 30px 30px 0;
+  color           : white;
+}
+
+#bannerText h1 {
+  font-family: Riffic;
+  font-size  : 22pt;
+}
+
+#bannerText h2 {
+  font-family: Riffic;
+  font-size  : 18pt;
+  margin     : 0 0 30px;
+}
+
+#bannerText p {
+  font-family: Montserrat;
+  font-weight: normal;
+  font-style : italic;
+  font-size  : 13pt;
+}
+
+#bannerArrow {
+  text-align: center;
+}
+
+#bannerArrow img {
+  transform: rotate(-90deg);
+  margin   : 10px 0;
+}
+
+#graphismRed {
+  text-align: center;
+  padding   : 100px 0 70px;
+}
+
+/*--------------------
+     2. NOSSOS PRODUTOS
+  ----------------------*/
+
+.nossosProdutosText {
+  color  : #652224;
+  padding: 0 40px 15px;
+}
+
+.produtosH2 {
+  /* text-align: center; */
+  display: flex;
+}
+
+.nossosProdutosText img {
+  /* transform: rotate(270deg) scaleX(-1); */
+  /* float: left; */
+}
+
+.nossosProdutosText h2 {
+  font-family: Riffic;
+  font-size  : 20pt;
+  /* text-align : center; */
+  margin     : 0 0 20px;
+}
+
+.nossosProdutosText p {
+  font-family: Montserrat;
+  font-size  : 13pt;
+}
+
+/*--- Carousel Nossos Bolos ---*/
+
+.visualContainerGroup {
+  overflow-x                : scroll;
+  white-space               : nowrap;
+  overflow-y                : hidden;
+  padding                   : 0 40px;
+  -ms-overflow-scrolling    : touch;
+  -moz-overflow-scrolling   : touch;
+  -o-overflow-scrolling     : touch;
+  -webkit-overflow-scrolling: touch;
+  -overflow-scrolling       : touch;
+  -ms-overflow-style        : -ms-autohiding-scrollbar;
+
+}
+
+#visualContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.innerSlide {
+  display  : inline-block;
+  width    : 80%;
+  margin   : 0 5px;
+  max-width: 350px;
+  z-index  : 5;
+}
+
+.slide-image {
+  max-width   : 100%;
+  max-height  : 100vh;
+  border-style: solid;
+  border-width: 5px;
+  border-color: white;
+  cursor      : pointer;
+  z-index     : 15;
+}
+
+.modal-open {
+  overflow    : hidden;
+  touch-action: none;
+  /* position: fixed; */
+}
+
+.modal {
+  display                   : none;
+  /* Hidden by default */
+  position                  : fixed;
+  /* Stay in place */
+  z-index                   : 15;
+  /* Sit on top */
+  padding                   : 50px 0 100px;
+  /* Location of the box */
+  left                      : 0;
+  top                       : 0;
+  width                     : 100%;
+  /* Full width */
+  background-color          : rgb(0,0,0);
+  /* Fallback color */
+  background-color          : rgba(0,0,0,0.9);
+  /* Black w/ opacity */
+  height                    : 100vh;
+  overflow-y                : scroll;
+  -ms-overflow-scrolling    : touch;
+  -moz-overflow-scrolling   : touch;
+  -o-overflow-scrolling     : touch;
+  -webkit-overflow-scrolling: touch;
+  -overflow-scrolling       : touch;
+  flex-direction            : column;
+  align-items               : center;
+}
+
+#imgModalContainer {
+  width: 90%;
+}
+
+#imgModal {
+  display: none;
+}
+
+.imgModal {
+  margin            : auto;
+  display           : block;
+  width             : 100%;
+  height            : 100%;
+  border-style      : solid;
+  border-width      : 5px;
+  border-color      : white;
+  animation-name    : zoom;
+  animation-duration: 0.6s;
+  position          : relative;
+  z-index           : 16;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Loader */
+.loader-wrapper {
+  z-index: 20;
+}
+
+.loader {
+  display          : none;
+  position         : absolute;
+  top              : 50%;
+  left             : 50%;
+  width            : 100px;
+  height           : 100px;
+  margin           : -75px 0 0 -50px;
+  border-radius    : 50%;
+  border           : 3px solid transparent;
+  border-top-color : #A0444B;
+  -webkit-animation: myanim 1.5s infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation        : myanim 1.5s infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+.loader:before {
+  content          : "";
+  position         : absolute;
+  top              : 5px;
+  left             : 5px;
+  right            : 5px;
+  bottom           : 5px;
+  border-radius    : 50%;
+  border           : 3px solid transparent;
+  border-top-color : #5A7F90;
+  -webkit-animation: myanim 1.5s infinite;
+  animation        : myanim 1.5s infinite;
+}
+
+.loader:after {
+  content          : "";
+  position         : absolute;
+  top              : 15px;
+  left             : 15px;
+  right            : 15px;
+  bottom           : 15px;
+  border-radius    : 50%;
+  border           : 3px solid transparent;
+  border-top-color : #AFD14A;
+  -webkit-animation: myanim 1.5s infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation        : myanim 1.5s infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+@-webkit-keyframes myanim {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform    : rotate(0deg);
+    transform        : rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform    : rotate(360deg);
+    transform        : rotate(360deg);
+  }
+}
+@keyframes myanim {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform    : rotate(0deg);
+    transform        : rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform    : rotate(360deg);
+    transform        : rotate(360deg);
+  }
+}
+
+/* The Close Button */
+
+.close {
+  position   : relative;
+  margin     : 0 0 5px;
+  color      : #f1f1f1;
+  font-size  : 40px;
+  font-weight: bold;
+  transition : 0.3s;
+}
+
+.close:focus,
+.close:hover {
+  color          : #bbb;
+  text-decoration: none;
+  cursor         : pointer;
+}
+
+/*--------------------
+     3. SOBRE NOS
+  ----------------------*/
+
+.pontilhado img {
+  width: 100%;
+}
+
+#sobreNosContainer {
+  padding         : 30px;
+  background-color: #887585;
+  text-align      : center;
+}
+
+#sobreNosContainer h2 {
+  font-family: Riffic;
+  color      : white;
+  font-size  : 20pt;
+  margin     : 25px 0 50px;
+}
+
+#logoSobreNos {
+  padding: 0 20px;
+}
+
+#logoSobreNos img {
+  width: 100%;
+}
+
+.sobreNosDoceImg {
+  margin: 45px 0 30px;
+}
+
+.sobreGraphism {
+  display        : flex;
+  justify-content: space-between;
+  align-items    : flex-start;
+}
+
+#sobreNosContainer h3 {
+  font-family: Montserrat;
+  font-weight: bold;
+  color      : white;
+  font-size  : 20pt;
+}
+
+#sobreNosContainer p {
+  font-family: Montserrat;
+  color      : white;
+  text-align : left;
+  font-size  : 13pt;
+}
+
+/*--------------------
+     4. TESTEMUNHOS
+  ----------------------*/
+
+#testemunhos {
+  padding: 140px 0;
+}
+
+#testemunhos h2 {
+  font-family: Riffic;
+  color      : #652224;
+  font-size  : 20pt;
+  text-align : center;
+  margin     : 0 0 80px;
+}
+
+.subTestemunhos {
+  text-align   : center;
+  font-family  : "Montserrat", sans-serif;
+  font-weight  : normal;
+  font-size    : 14pt;
+  margin       : 0 0 260px;
+  border       : 6px solid #652224;
+  border-radius: 10%;
+}
+
+.descricaoTestemunho {
+  margin: 0 60px;
+  color : #652224;
+}
+
+.testemunhosList {
+  position: absolute;
+  top     : 410px;
+}
+
+.nomeTestemunho {
+  position    : absolute;
+  top         : 300px;
+  margin-left : auto;
+  margin-right: auto;
+  left        : 0;
+  right       : 0;
+}
+
+.nome {
+  font-family: Montserrat;
+  font-weight: bold;
+  color      : #652224;
+  font-size  : 16pt;
+}
+
+.openQuote {
+  font-family: Montserrat;
+  font-weight: bold;
+  color      : #652224;
+  font-size  : 30pt;
+  line-height: 0.8;
+  margin     : 0;
+  padding    : 0 10px;
+}
+
+.endQuote {
+  text-align : center;
+  font-family: Montserrat;
+  font-weight: bold;
+  color      : #652224;
+  font-size  : 30pt;
+  line-height: 1.5;
+  margin     : 0;
+}
+
+.testemunhosList li {
+  border-radius   : 50%;
+  height          : 20px;
+  width           : 20px;
+  background-color: transparent;
+  border-width    : 2px;
+  border-style    : solid;
+  border-color    : #652224;
+  margin          : 0 10px;
+}
+
+.testemunhosList li:active {
+  background-color: #652224;
+}
+
+/*--------------------
+     4. FALE CONOSCO
+  ----------------------*/
+
+#faleconoscocontainer {
+  background-color: #A45C50;
+  text-align      : center;
+  padding         : 0 30px;
+}
+
+#faleconoscocontainer h2 {
+  font-family: Riffic;
+  color      : #652224;
+  font-size  : 22pt;
+
+}
+
+#contato {
+  border          : 3px solid #652224;
+  border-radius   : 10%;
+  padding         : 30px;
+  text-align      : left;
+  background-color: white;
+  margin          : 60px 0;
+}
+
+#contato h3 {
+  font-family: Montserrat;
+  font-weight: bold;
+  color      : #652224;
+}
+
+#contato p {
+  font-family: Montserrat;
+  font-weight: normal;
+  color      : #652224;
+}
+
+#midiaSocial {
+  border          : 3px solid #652224;
+  border-radius   : 10%;
+  padding         : 30px;
+  text-align      : left;
+  background-color: white;
+}
+
+#midiaFace {
+  display: flex;
+}
+
+#midiaSocial p {
+  font-family: Montserrat;
+  font-weight: bold;
+  color      : #652224;
+  margin     : 0 0 0 20px;
+}
+
+/*--------------------
+     5. SUB MENU
+  ----------------------*/
+
+#subMenu {
+  background-color: #360B16;
+  padding         : 30px;
+  display         : flex;
+  justify-content : space-between;
+}
+
+#subMenuLinks {
+  list-style: none;
+  margin    : 0;
+  padding   : 0;
+}
+
+#subMenuLinks a {
+  font-family: Montserrat;
+  font-weight: normal;
+  color      : white;
+}
+
+#subMenuImages {
+  display       : flex;
+  flex-direction: column;
+}
+
+#subMenuImages:first-child {
+  margin: 0 0 10px;
+}
+
+/*--------------------
+     5. FOOTER
+  ----------------------*/
+
+footer {
+  background-color: black;
+  color           : white;
+  text-align      : center;
+  padding         : 30px 0;
+}
+
+footer p {
+  margin: 0;
+}
